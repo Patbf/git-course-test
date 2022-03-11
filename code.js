@@ -5,7 +5,7 @@ $(document).ready(function() {
 	rules: {
     name : {
        required: true,
-       minlength: 3
+       minlength: 6
       },
     email: {
        required: true,
