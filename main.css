@@ -1,0 +1,723 @@
+@charset "utf-8";
+
+@font-face{ 
+	font-family: IMFellEnglishSC-Regular;
+	src: url('../fonts/IM_Fell_English_SC/IMFellEnglishSC-Regular.ttf'); }
+@font-face{ 
+	font-family: ReadexPro-Regular;
+	src: url('../fonts/Readex_Pro/static/ReadexPro-Regular.ttf'); }
+
+@font-face{ 
+	font-family: YesevaOne-Regular;
+	src: url('../fonts/Yeseva_One/YesevaOne-Regular.ttf'); }
+
+/*VARIABLES*/
+
+:root{
+	--Red: #DA291C;
+	--Orange:  #FFB81C;
+	--Black:  #1d1d1b;
+	--Readex: ReadexPro-Regular;
+	--Yeseva: YesevaOne-Regular;
+	--English: IMFellEnglishSC-Regular, serif;
+}
+
+
+/*GENERAL*/
+
+body{
+	font-family: var(--Readex);
+	box-sizing: border-box;
+	margin: 0;
+	background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+a{
+	text-decoration: none;
+	cursor: pointer;	
+}
+
+img{
+	max-width: 100%;
+}
+/*HEADER*/
+
+
+h1, h2{
+	font-family: var(--Yeseva);
+}
+
+h1{
+	font-size: 45px;
+	text-align: center;
+}
+
+h3{
+	font-family: var(--Readex);
+    color: var(--Red);
+    font-size: 45px;
+
+}
+
+
+
+.quote{
+	text-align: center;
+	font-family: var(--English);
+	font-weight: 400;
+	font-size: 24px;
+}
+
+.container {
+	max-width: 95%;
+	margin: 0 auto;
+}
+
+/*NAVBAR*/
+
+.navbar{
+	text-align: center;	
+}
+
+.navbar li{
+	display: inline-block;
+	padding: 20px 3%;
+
+}
+
+.navbar li a{
+	color: #000000;
+	padding-bottom: 5px;
+	border-bottom: 3px solid var(--Orange) ;
+	transition-duration: 0.4s;
+}
+
+.navbar li a:hover{
+	border-bottom:solid 3px var(--Red);
+}
+
+.active{
+
+	border-bottom: 3px solid var(--Red) !important;
+}
+
+
+/*-------------------------------------------BANNER------------------------------------------*/
+
+#banner img{
+	width: 100%;
+	height: auto;
+}
+
+#banner{
+	position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+#banner-text{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: #5c5a5a96;
+    border: 5px solid white;
+    padding: 20px;
+
+}
+
+
+#banner-text h2{
+	font-size: 50px;
+}
+
+.banner-subtitle{
+	font-family: var(--English);
+	font-size: 20px;
+}
+
+/*-----------------------------------------------RESPONSIVE BANNER-----------------------------------------------*/
+
+	
+	@media (max-width: 1120px){
+
+		#banner-text{
+			padding: 10px;
+		}
+
+		#banner-text h2{
+			font-size: 30px;
+		}
+
+	}
+
+	@media (max-width: 700px){
+
+		#banner-text {
+			padding: 0;
+			border: none;
+			background-color: transparent;
+
+		}
+		#banner-text h2{
+			font-size: 20px;
+		}
+		.banner-subtitle{
+			display: none;
+		}
+
+	}
+/*-----------------------------------------------INDEX-----------------------------------------------*/
+
+.container-index{
+
+	display: flex;
+  
+}
+.container-index:nth-child(even){
+	background-color: var(--Black);
+    color: white;
+}
+.container-index div{
+	
+	width: 50%;
+    position: relative;
+    padding: 33px;
+}
+
+.go-to-button-even a {
+    color: black;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.go-to-button a {
+    color: white;
+    padding: 10px;
+    background-color: var(--Black);
+    border-radius: 5px;
+}
+
+.go-to-button{
+	margin-top: 50px;
+	text-align: right;
+}
+
+.go-to-button-even{
+	margin-top: 50px;
+}
+
+.go-to-button a:hover{
+	background-color: white;
+	color: black;
+	border-radius: 5px;
+	border: 1px solid var(--Black);
+}
+
+.go-to-button-even a:hover{
+	background-color: var(--Black);
+	color: white;
+	border-radius: 5px;
+	border: 1px solid white;
+}
+
+.go-to-button a{
+	transition-duration: 0.4s;
+}
+
+.go-to-button-even a{
+	transition-duration: 0.4s;
+
+}
+
+/*-----------------------------------------------RESPONSIVE INDEX-----------------------------------------------*/
+
+@media (max-width: 768px){
+	.container-index{
+		flex-direction: column;
+		align-items: center;
+
+	}
+	.go-to-button{
+
+		text-align: center;
+
+	}
+	
+}
+
+
+/*------------------------------------------------FOOTER-------------------------------------------------*/
+
+
+#logo-vcentenario img{
+	width: 150px;
+}
+
+footer{
+	display: flex;
+    flex-flow: row wrap;
+    margin-top: 100px;
+}
+
+.footer-column{
+    padding: 20px;
+    flex: 1 0 0;
+}
+
+#footer-full{
+	width: 100%;
+	text-align: center;
+	position: relative;
+	background-color: var(--Red);
+	color: white;
+
+}
+
+#footer-full img{
+	width: 45px;
+}
+
+footer > *{
+	padding: 10px;
+	flex: 1 100%;
+}
+
+footer ul{
+	list-style: none;
+    text-align: right;
+    border-right: solid 3px;
+    padding-right: 20px;
+   
+}
+
+footer ul li a{
+	 color: var(--Black);
+}
+
+.list li a:hover{
+	font-weight: bold;
+}
+
+.booking img {
+	order: -1;
+}
+
+/*BUTTON GO TOP*/
+
+#go-top img{
+	width: 60px;
+}
+
+#go-top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+
+
+/*-----------------------------------------------HISTORY PAGE-----------------------------------------------*/
+.history-subtitle {
+
+	text-align: center;
+	font-family: var(--English);
+	color: black;
+}
+
+
+.content-history {
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	column-gap: 20px;
+	row-gap: 30px;
+}
+
+
+.history {
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	padding: 20px;
+	color: black;
+	text-align: justify;
+	border-radius: 15px;
+	box-shadow: 1px -2px 15px 5px rgba(0,0,0,0.10);
+}
+
+.history-img {
+
+	margin: 0 auto;
+}
+
+.history-text{
+	padding: 10px 20px;
+}
+
+.rute-map {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.rute-map iframe{
+
+	width: 100%;
+	height: 400px;
+}
+
+
+div #history-text p {
+	margin: 2px 2px 40px 2px;
+}
+/*-----------------------------------------------HISTORY RESPONSIVE-----------------------------------------------*/
+
+@media (max-width:  1280px){
+
+	.content-history{
+		grid-template-columns:50% 50%;
+	}
+}
+
+@media (max-width:  768px){
+
+	.content-history{
+		grid-template-columns:1fr;
+	}
+
+
+	
+}
+
+
+
+/*-----------------------------------------------BOOKING-----------------------------------------------*/
+   
+.form-box {
+
+	display: flex;
+	justify-content: center;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+	width: 80%;
+	padding: 20px;
+}
+
+.form-element label {
+
+	color: white;
+	margin-right: 10px;
+	margin-bottom: 10px;
+
+}
+
+.form-element input {
+	max-width: 90%;
+	font-size: 17px;
+	padding: 15px;
+	border-radius: 50px;
+	border: none;
+	width: 90%;
+
+}
+
+.form-element {
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+
+}
+
+.form-section {
+
+	font-size: 35px;
+	text-align: center;
+}
+
+.form-radiobuttom {
+
+	display: flex;
+	justify-content: center;
+
+}
+
+.form-radiobuttom input {
+
+	width: auto;
+}
+
+.datos div {
+
+	padding: 10px 0px;
+	margin: 5px;
+	border-radius: 5px;
+       
+}
+
+.visitors div {
+
+
+	padding: 10px 0px;
+	margin: 5px;
+	border-radius: 5px;
+}
+
+input[type=submit] {
+
+  background-color: var(--Orange);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=submit]:hover {
+  background-color: var(--Orange);
+}
+
+textarea#observations {
+	width: 100%;
+	height: 150px;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	border: none;
+	border-radius: 15px;
+	font-size: 16px;
+	resize: none;
+}
+
+.row{
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.column{
+
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+	border: 1px solid black;
+	border-radius: 15px;
+	background-color: var(--Black);
+	margin: 77px;
+	padding: 5px 40px;
+
+}
+
+/*-----------------------------------------------RESPONSIVE BOOKING-----------------------------------------------*/
+
+@media (max-width:  768px){
+
+	form{
+
+		width: auto;
+	}
+
+}
+  
+/*-----------------------------------------------ABOUT CENTER-----------------------------------------------*/
+
+.about-center {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--Black);
+    color: white;
+    padding: 20px;
+    margin-top: 150px;
+}
+
+.about-center-text {
+    width: 80%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 3%;
+}
+.center-image {
+	width: 40%;
+	padding: 30px;
+}
+
+.about-center-img {
+    width: auto;
+    padding: 3%;
+ }
+
+div #go {
+	text-align: center;
+}
+
+#location {
+ 
+ display: grid;
+ grid-template-columns: 50% 50%;
+ column-gap: 5%;
+}
+
+#map {
+
+	text-align: right;
+
+}
+
+div #transports {
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 94%;
+}
+
+div #bus {
+    text-align: left;
+   
+}
+
+div #train {
+    text-align: left;
+  
+}
+
+div #boat {
+    text-align: left;
+  
+}
+
+#transports img {
+	max-width: 10%;
+}
+
+#transports p {
+	color: var(--Black);
+}
+
+#transports p:hover {
+  color: var(--Red);
+}
+
+.center-icon {
+	margin-top: 150px;
+	text-align: center;
+}
+
+.center-icon img{
+	width: 500px;
+}
+
+#go {
+	margin-top: 150px;
+}
+
+#gmap_canvas {
+
+		width: 100%;
+		height: 400px;
+	}
+
+/*----------------------------------------------- RESPONSIVE ABOUT CENTER -----------------------------------------------*/
+@media (max-width:  1280px){
+
+	#transports img {
+	max-width: 15%;
+}
+
+}
+@media (max-width: 768px){
+
+	.about-center{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.center-image {
+		width: 90%;
+	}
+
+	#location{
+		grid-template-columns: 1fr;
+
+	}
+
+	div #transports{
+
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	#transports img {
+	max-width: 20%;
+
+	}
+
+	div #bus {
+    text-align: unset;
+   
+	}
+
+	div #train {
+    text-align: unset;
+  
+	}
+
+	div #boat {
+	    text-align: unset;
+	  
+	}
+
+
+
+
+}
+
+/*-----------------------------------------------PROJECTS-----------------------------------------------*/
+.introduction-text {
+	display: flex;
+	background-color: var(--Black);
+	padding: 15px;
+	border-radius: 15px;
+	color: white;
+	box-shadow: 1px -2px 15px 5px rgba(0,0,0,0.10);
+	margin: 90px 0;
+	align-items: center;
+}
+.introduction-text i{
+	color: var(--Black);
+	background-color: var(--Orange);
+	padding: 20px;
+	margin-right: 20px;
+	border-radius: 100%;
+	font-size: 25px;
+}
+.introduction-text img {
+	width: 100px;
+	margin-right: 20px;
+
+}
+.project-subtitle {
+
+	margin-top: -40px;
+}
+
+.project-images  {
+
+	text-align: center;
+	margin: 0 auto;
+
+
+}
